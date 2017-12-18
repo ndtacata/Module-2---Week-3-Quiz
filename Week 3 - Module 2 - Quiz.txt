@@ -1,0 +1,13 @@
+1)
+data <- iris
+data.virginica <- data[data$Species == "virginica", ]
+data.Sepal.Length <- data.virginica[, "Sepal.Length"]
+mean.Sepal.Length <- mean(data.Sepal.Length)
+
+4)
+
+cylinder_4 <- data[data$cyl == 4, c("hp", "cyl")]
+cylinder_4_ave <- mean(cylinder_4$hp)
+cylinder_8 <- data[data$cyl == 8, c("hp", "cyl")]
+cylinder_8_ave <- mean(cylinder_8$hp)
+abs(cylinder_4_ave - cylinder_8_ave)
